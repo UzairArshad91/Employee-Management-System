@@ -43,7 +43,7 @@ def displayEmployee():
     top.title("Employees list")
     top.geometry("800x600")
 
-    top.transient(root)   # 🔹 Makes window stay on top of main root  
+    top.transient(root)   #Makes window stay on top of main root  
 
     style = ttk.Style()
     style.configure("Treeview", font=("Arial", 12))          # Row font
@@ -124,7 +124,7 @@ def promoteEmployee():
     currentSalary=int(row[3].value)
     row[3].value=currentSalary+amount
 
-    # ✅ Keep old post if user leaves input empty or presses cancel
+    #Keep old post if user leaves input empty or presses cancel
     if post and post.strip() != "":
         row[2].value = post
 
@@ -181,3 +181,4 @@ root.eval('tk::PlaceWindow . center')
 root.resizable(False, False)
 
 root.mainloop()
+
